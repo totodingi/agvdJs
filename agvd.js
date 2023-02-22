@@ -74,8 +74,7 @@ class Agvd{
         body: JSON.stringify(params)
       }
     )
-      .then(res => res.text())
-      // .then(handle => console.log(handle))
+      .then(res => res.json())
       .catch(e => console.error(e))
   }
 }
