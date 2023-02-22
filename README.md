@@ -1,7 +1,6 @@
 ## Getting Started
 
-###1. Signup
-
+### 1. Signup
 ```javascript
 import Agvd from "agvd";
 
@@ -16,7 +15,7 @@ handle.signup({
 
 ```
 
-###2. Login
+### 2. Login
 ```javascript
 import Agvd from "agvd";
 
@@ -28,7 +27,7 @@ handle.login({
 
 ```
 
-###3 Variant Query
+### 3 Variant Query
 You need to be authenticated to for you to query the AGVD. On login, a token shall
 be supplied with which you'll submit as an argument to the
 query function.
