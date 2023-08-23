@@ -11,11 +11,11 @@ class Agvd{
     /**
      * The function accepts the following arguments:
      * @param {Object} params - Allowed arguments
-     * @param {String} params.user - Unique user-id
+     * @param {String} params.user_id - Unique user id
      * @param {String} params.password - User's password
      *
      * Example:
-     *  user: "johndoe"
+     *  user_id: "johndoe"
      *  password: "Password1@"
      */
     return this.request('login', params)
@@ -47,8 +47,6 @@ class Agvd{
      * The function accepts the following allowed arguments:
      * @param {Object} params - Allowed arguments
      * @param {String} params.token - A token supplied after user login; If user doesn't want to log in first before making the query, the user can append their user-id and password as keyword parameters in the query function
-     * @param {String} params.user - unique user-id
-     * @param {String} params.password - user password
      * @param {String} params.id - List of IDs, these can be rs IDs (dbSNP) or variants in the format chrom:start:ref:alt
      * @param {String} params.region - List of regions, these can be just a single chromosome name or regions in the format <chromosome>:<start>-<end>
      * @param {String} params.type - List of types, accepted values are SNV, MNV, INDEL, SV, CNV, INSERTION, DELETION
@@ -66,7 +64,7 @@ class Agvd{
 
    request(endpoint,params){
     return fetch(
-      `https://agvd-rps.h3abionet.org/agvd/${endpoint}`,{
+      `https://agvd-rps.h3abionet.org/api/${endpoint}`,{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
